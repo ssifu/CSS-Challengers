@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+.card {
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background-color: var(--dark-desaturated-blue);
+  margin: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: relative;
+  background-size: cover;
+}
+
+.hero-img img {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  background-color: var(--soft-violet);
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 4rem;
+}
+
+.hero-title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.hero-title span {
+  color: var(--soft-violet);
+}
+
+.hero > p {
+  color: var(--slightly-transparent-white-main);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-info > p {
+  color: var(--slightly-transparent-white-stat);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.grid-flow[data-spacing="large"] {
+  gap: 2.5rem;
+}
+
+.grid-flow {
+  display: grid;
+  align-content: center;
+  gap: 1.5rem;
+  padding: 2rem 4rem;
+}
+
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 70rem;
+  }
+
+  .hero {
+    text-align: start;
+    padding-right: 6rem;
+  }
+
+  .hero-img {
+    background-size: cover;
+    order: 1;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0rem;
+  }
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
